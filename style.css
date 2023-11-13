@@ -1,0 +1,118 @@
+:root{
+   --White:hsl(0, 0%, 100%);
+   --Off-white:  hsl(0, 0%, 94%);
+   --Light-grey:  hsl(0, 0%, 86%);
+   --Smokey-grey:  hsl(0, 1%, 44%);
+   --Off-black:  hsl(0, 0%, 8%);
+   --Purple:  hsl(259, 100%, 65%);
+   --Light-red:  hsl(0, 100%, 67%);
+
+}
+
+
+@font-face {
+    font-family: 'pop';
+    src: url(assets/fonts/Poppins-Regular.ttf);
+}
+* {
+   font-family: pop !important;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--Off-white);
+}
+.container{
+    background-color: var(--White);
+    width: 420px;
+    padding: 30px;
+    border-bottom-right-radius: 150px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    position: relative;
+}
+input {
+    width: 70px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid var(--Off-white);
+    outline: none;
+    margin-top: 5px;
+}
+input:focus{
+    border: 2px solid var(--Purple);
+}
+small{
+    color: red;
+    font-size: 0.6rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.input-container span{
+    font-size: 12px;
+    color: var(--Smokey-grey);
+    font-weight: 600;
+}
+.submit-btn{
+    width: 70px;
+    height: 70px;
+    padding: 20px;
+    background-color: var(--Purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 30px;
+    top:100px
+}
+.submit-btn:hover{
+    background-color: black;
+    cursor: pointer;
+}
+h1 span{
+    font-size: 40px;
+    color: var(--Purple);
+    font-style: italic;
+    padding-right: 15px;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+.input-row{
+    display: flex;
+    border-bottom: 2px solid var(--Off-white);
+}
+
+@media (max-width:768px) {
+    input{
+        width: 80%;
+    }
+    h1 span {
+        font-size: 1.75rem;
+        padding-right: 8px;
+    }
+    .submit-btn{
+        width: 10%;
+        height: 10%;
+        right: 40%;
+        top:110px
+    }
+    .output{
+        margin-top: 30px;
+    }
+    .submit-btn img{
+        transform: scale(0.5);
+    }
+}
